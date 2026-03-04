@@ -1,178 +1,150 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JohnCris.blog</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+    <meta charset="UTF-8">
+    <title>John Cris F. Papuran | Personal Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-    background: #0f0f0f;
-    color: #e0e0e0;
-    overflow-x: hidden;
-}
-
-header {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(145deg, #111, #1c1c1c);
-    animation: fadeIn 2s ease-in-out;
-}
-
-header h1 {
-    font-size: 50px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    animation: slideDown 1.5s ease;
-}
-
-header p {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #aaa;
-    animation: fadeIn 3s ease;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    background: rgba(15, 15, 15, 0.9);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-}
-
-nav h2 {
-    color: #fff;
-}
-
-nav a {
-    color: #ccc;
-    text-decoration: none;
-    margin-left: 20px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #fff;
-}
-
-section {
-    padding: 100px 10%;
-}
-
-.section-title {
-    font-size: 32px;
-    margin-bottom: 40px;
-    border-left: 4px solid #555;
-    padding-left: 15px;
-}
-
-.blog-card {
-    background: #1a1a1a;
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    transition: 0.4s;
-    transform: translateY(40px);
-    opacity: 0;
-}
-
-.blog-card.show {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.blog-card:hover {
-    background: #242424;
-    transform: translateY(-10px);
-}
-
-.blog-card h3 {
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.blog-card p {
-    color: #aaa;
-    font-size: 15px;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #111;
-    color: #777;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes slideDown {
-    from {transform: translateY(-50px); opacity: 0;}
-    to {transform: translateY(0); opacity: 1;}
-}
-
-</style></head>
-<body><nav>
-    <h2>JohnCris.blog</h2>
-    <div>
-        <a href="#home">Home</a>
-        <a href="#blog">Blog</a>
-        <a href="#about">About</a>
-    </div>
-</nav><header id="home">
-    <h1>Welcome to My Personal Blog</h1>
-    <p>Thoughts, ideas, and personal experiences by JohnCris</p>
-</header><section id="blog">
-    <h2 class="section-title">Latest Posts</h2><div class="blog-card">
-    <h3>My Journey as a Student</h3>
-    <p>This post talks about my experiences, challenges, and lessons I learned as a student pursuing my goals.</p>
-</div>
-
-<div class="blog-card">
-    <h3>Why Self-Discipline Matters</h3>
-    <p>Self-discipline is one of the most important habits for success. Here’s how I try to improve mine every day.</p>
-</div>
-
-<div class="blog-card">
-    <h3>Technology and My Future</h3>
-    <p>Technology is evolving fast. In this blog, I share my thoughts on how it can shape my future career.</p>
-</div>
-
-</section><section id="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="blog-card">
-        <p>Hello! I’m JohnCris. This is my modern animated personal blog where I share my thoughts, experiences, and growth journey. I believe in continuous learning and self-improvement.</p>
-    </div>
-</section><footer>
-    © 2026 JohnCris.blog | All Rights Reserved
-</footer><script>
-const cards = document.querySelectorAll('.blog-card');
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
-    });
-});
 
-cards.forEach(card => {
-    observer.observe(card);
-});
-</script></body>
+        body {
+            background-color: #0f0f0f;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #000000, #2c2c2c);
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 3px;
+        }
+
+        header h2 {
+            margin-top: 10px;
+            font-weight: normal;
+            color: #aaa;
+        }
+
+        header p {
+            margin-top: 15px;
+            color: #888;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #1a1a1a;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background-color: #222;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            color: #777;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background: #444;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JOHN CRIS F. PAPURAN</h1>
+    <h2>BS - CRIMINOLOGY</h2>
+    <p>Section 3-A</p>
+    <button class="btn" onclick="scrollToBlog()">View My Blog</button>
+</header>
+
+<section id="blog">
+    <div class="card">
+        <h3>My Journey in Criminology</h3>
+        <p>
+            Welcome to my personal blog. I am currently a BS Criminology student from Section 3-A.
+            This blog will contain my reflections, academic learnings, and insights about law enforcement,
+            criminal justice, and personal growth.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Why I Chose Criminology</h3>
+        <p>
+            I chose criminology because I want to serve the community and understand how laws
+            protect society. Studying criminal behavior and justice systems helps me grow
+            as a future professional in the field.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Future Goals</h3>
+        <p>
+            My goal is to become a disciplined, knowledgeable, and responsible professional.
+            I aim to pass the board exam and contribute positively to society.
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 John Cris F. Papuran | Personal Blog
+</footer>
+
+<script>
+    function scrollToBlog() {
+        document.getElementById("blog").scrollIntoView({ behavior: "smooth" });
+    }
+</script>
+
+</body>
 </html>
